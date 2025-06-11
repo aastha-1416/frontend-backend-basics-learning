@@ -10,8 +10,8 @@ This repository contains my daily progress. Each `.py` file covers a specific to
 - ✅ Lists
 - ✅ Tuples
 - ✅ Dictionary
-- ✅ Date & Time
-- ✅ Functions
-- ✅ Modules
-- ✅ File I/O
-- ✅ Exceptions
+-  Date & Time
+-  Functions
+-  Modules
+-  File I/O
+-  Exceptions
