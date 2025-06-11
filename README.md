@@ -1,0 +1,17 @@
+This repository contains my daily progress. Each `.py` file covers a specific topic:
+- ✅ Basic Syntax
+- ✅ Variables
+- ✅ Data Types
+- ✅ Operators
+- ✅ Decision Making
+- ✅ Loops
+- ✅ Numbers
+- ✅ Strings
+- ✅ Lists
+- ✅ Tuples
+- ✅ Dictionary
+- ✅ Date & Time
+- ✅ Functions
+- ✅ Modules
+- ✅ File I/O
+- ✅ Exceptions
