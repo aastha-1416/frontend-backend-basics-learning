@@ -14,4 +14,4 @@ This repository contains my daily progress. Each `.py` file covers a specific to
 - ✅ Functions
 - ✅ Modules
 - ✅oops Concepts
--  Exceptions
+- ✅ Exceptions
