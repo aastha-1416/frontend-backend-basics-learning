@@ -1,6 +1,20 @@
-main_list = [['KOHLI', 'SACHIN', 'PANTH'], ['dravid', 'ravi', 'rahul','jasprit'], ['KAPIL', 'Jadeja', 'kohli','irfan','Hardik']]
+def flatten_list(nested):
+    stack = [nested]      
+    result = []
 
-# Flattening using sum
-output = sum(main_list, [])
+    while stack:
+        current = stack.pop()  
 
-print(output)
+        if type(current) == list:
+        
+            for item in reversed(current):
+                stack.append(item)
+        else:
+            result.append(current)
+
+    return result
+main_list = [[['KOHLI', 'SACHIN'], 'PANTH'],
+             ['dravid', 'ravi', 'rahul', 'jasprit'],
+             ['KAPIL', 'Jadeja', 'kohli', 'irfan', 'Hardik']]
+
+print(flatten_list(main_list))
