@@ -13,8 +13,7 @@ def longestcommonprefix(array):
 if __name__ == "__main__":
     arr = ["flower", "flow", "flight"]
     print("Result 1:", longestcommonprefix(arr))
-
-if __name__ == "__main__":
+	
     arr = ["dog", "racecar", "car"]
     result = longestcommonprefix(arr)
     print("Result 2:", result)
