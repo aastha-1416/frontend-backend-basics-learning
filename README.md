@@ -17,3 +17,4 @@ This repository contains my daily progress. Each `.py` file covers a specific to
 - ✅ Exceptions
 - ✅File Handling
 - ✅os module
+- ✅json
