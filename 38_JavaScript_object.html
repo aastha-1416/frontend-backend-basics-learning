@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Object Example</title>
+</head>
+<body>
+
+  <h2>JavaScript Object Example</h2>
+  <p id="info"></p>
+
+  <script>
+    // Creating an object
+    const person = {
+      name: "Annie",
+      age: 25,
+      city: "Mumbai"
+    };
+
+    // Accessing object properties
+    let details = "Name: " + person.name + "<br>" +
+                  "Age: " + person.age + "<br>" +
+                  "City: " + person.city;
+
+    // Displaying in HTML
+    document.getElementById("info").innerHTML = details;
+  </script>
+
+</body>
+</html>

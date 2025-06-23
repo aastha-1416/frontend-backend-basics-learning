@@ -1,0 +1,20 @@
+<html>
+<body>
+  <p id = "output1">The bike1 object is : </p>
+  <p id = "output2">The bike2 object is :  </p>
+  <script>
+
+    function Bike(name, speed, gear) {
+      this.name = name;
+      this.speed = speed;
+      this.gear = gear;
+    }
+    
+    const bike1 = new Bike("Honda", 100, 4);
+    const bike2 = new Bike("Yamaha", 200, 6);
+    document.getElementById("output1").innerHTML += JSON.stringify(bike1);
+    document.getElementById("output2").innerHTML += JSON.stringify(bike2);
+    
+  </script>
+</body>
+</html>

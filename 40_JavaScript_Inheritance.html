@@ -1,0 +1,33 @@
+<html>
+<body>
+   <div id = "output1">The brand of the bike is: </div>
+   <div id = "output2">Total gears in the bike is: </div>
+   <script>
+      // Parent class
+      class Bike {
+         constructor() {
+            this.gear = 5;
+         }
+
+         getGears() {
+            return this.gear;
+         }
+      }
+      // Child class
+      class suzuki extends Bike {
+         constructor() {
+            super();
+            this.brand = "Yamaha"
+         }
+
+         getBrand() {
+            return this.brand;
+         }
+      }
+
+      const suzukiBike = new suzuki();
+      document.getElementById("output1").innerHTML += suzukiBike.getBrand();
+      document.getElementById("output2").innerHTML += suzukiBike.getGears();
+   </script>
+</body>
+</html>

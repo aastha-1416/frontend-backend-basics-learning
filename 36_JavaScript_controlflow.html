@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>Control Flow Example</title>
+</head>
+<body>
+
+  <h2>Check Number Type</h2>
+
+  <p id="result"></p>
+
+  <script>
+    
+    let number = -5;
+
+    // Control flow using if-else
+    if (number > 0) {
+      document.getElementById("result").innerHTML = number + " is positive.";
+    } else if (number < 0) {
+      document.getElementById("result").innerHTML = number + " is negative.";
+    } else {
+      document.getElementById("result").innerHTML = "The number is zero.";
+    }
+  </script>
+
+</body>
+</html>
