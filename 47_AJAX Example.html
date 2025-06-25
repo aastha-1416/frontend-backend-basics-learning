@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<button id="loadData">Load Data</button>
+<div id="result"></div>
+
+<script>
+  $(document).ready(function() {
+    $("#loadData").click(function() {
+      $.get("https://jsonplaceholder.typicode.com/posts/1", function(data) {
+        $("#result").html(`<h3>${data.title}</h3><p>${data.body}</p>`);
+      });
+    });
+  });
+</script>
+
+
+  </body>
+</html>

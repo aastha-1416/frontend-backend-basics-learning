@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <button id="hoverBtn">Hover Over Me</button>
+<p id="status"></p>
+
+<script>
+  $(document).ready(function() {
+    $("#hoverBtn").hover(
+      function() {
+        $("#status").text("Mouse entered");
+      },
+      function() {
+        $("#status").text("Mouse left");
+      }
+    );
+  });
+</script>
+
+</body>
+</html>

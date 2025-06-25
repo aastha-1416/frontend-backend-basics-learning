@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div class="box">Box 1</div>
+<div class="box">Box 2</div>
+<p id="para">Paragraph</p>
+
+<script>
+  $(document).ready(function() {
+    $(".box").css("color", "blue");     // Class selector
+    $("#para").css("font-weight", "bold"); // ID selector
+    $("div").css("border", "1px solid red"); // Tag selector
+  });
+</script>
+</body>
+</html>
