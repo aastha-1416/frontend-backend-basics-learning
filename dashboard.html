@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <script>
+    async function fetchNewJoke() {
+      const response = await fetch('/new-joke');
+      const data = await response.json();
+      document.getElementById('joke').textContent = data.joke;
+    }
+  </script>
+</head>
+<body>
+  <h2>Welcome to your Dashboard!</h2>
+  <p>Here's your dad joke:</p>
+  <blockquote id="joke">{{ joke }}</blockquote>
+  <button onclick="fetchNewJoke()">Refresh Joke</button>
+  <br><br>
+  <a href="/logout">Logout</a>
+</body>
+</html>
