@@ -1,24 +1,8 @@
-import React from 'react';
-import WhatIsHook from './hooks/Hook';
-import UseStateExample from './hooks/UseStateExample';
-import UseEffectExample from './hooks/UseEffectExample';
-import UseContextExample from './hooks/UseContextExample';
-import UseRefExample from './hooks/UseRefExample';
+import React from "react";
+import CartApp from "./CartApp";
 
 function App() {
-  return (
-    <div style={{ padding: "20px" }}>
-      <Hook />
-      <hr />
-      <UseStateExample />
-      <hr />
-      <UseEffectExample />
-      <hr />
-      <UseContextExample />
-      <hr />
-      <UseRefExample />
-    </div>
-  );
+  return <CartApp />;
 }
 
 export default App;
