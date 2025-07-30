@@ -1,5 +1,3 @@
-// cartReducer.js
-
 export const initialState = {
   cart: [],
   total: 0,
@@ -7,36 +5,47 @@ export const initialState = {
 
 export const cartReducer = (state, action) => {
   switch (action.type) {
-    case "ADD_ITEM":
+    case 'ADD_ITEM':
+      const exists = state.cart.find(item => item.id === action.payload.id);
+      if (exists) {
+        return {
+          ...state,
+          cart: state.cart.map(item =>
+            item.id === action.payload.id
+              ? { ...item, quantity: item.quantity + 1 }
+              : item
+          ),
+        };
+      } else {
+        return {
+          ...state,
+          cart: [...state.cart, { ...action.payload, quantity: 1 }],
+        };
+      }
+
+    case 'REMOVE_ITEM':
       return {
         ...state,
-        cart: [...state.cart, { ...action.payload, quantity: 1 }],
+        cart: state.cart.filter(item => item.id !== action.payload),
       };
 
-    case "REMOVE_ITEM":
+    case 'UPDATE_QUANTITY':
       return {
         ...state,
-        cart: state.cart.filter((item) => item.id !== action.payload.id),
-      };
-
-    case "UPDATE_QUANTITY":
-      return {
-        ...state,
-        cart: state.cart.map((item) =>
+        cart: state.cart.map(item =>
           item.id === action.payload.id
             ? { ...item, quantity: action.payload.quantity }
             : item
         ),
       };
 
-    case "CLEAR_CART":
+    case 'CLEAR_CART':
       return {
         ...state,
         cart: [],
-        total: 0,
       };
 
-    case "CALCULATE_TOTAL":
+    case 'CALCULATE_TOTAL':
       const total = state.cart.reduce(
         (acc, item) => acc + item.price * item.quantity,
         0
