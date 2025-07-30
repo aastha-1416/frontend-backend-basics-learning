@@ -1,5 +1,5 @@
-import React from "react";
-import CartApp from "./CartApp";
+import React from 'react';
+import CartApp from './CartApp';
 
 function App() {
   return <CartApp />;
